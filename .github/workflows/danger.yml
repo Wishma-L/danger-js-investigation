@@ -18,4 +18,5 @@ jobs:
     # yarn build
     - name: Danger
       run: npx danger ci
-      env: GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
