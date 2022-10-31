@@ -1,23 +1,22 @@
-name: "Danger JS"
+name: Node CI
 on: [pull_request]
 
-jobs: 
-  Danger:
-  name: Danger JS
-  runs-on: ubuntu-latest
-  steps: 
-    - 
-      uses: actions/checkout@v1
-    - 
-      name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-        cache: 'yarn'
-    - 
-      name: Install project dependencies
-      run: yarn --prefer-offline
-    - 
-      name: Danger
-      uses: danger/danger-js@9.1.6
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+test:
+runs-on: ubuntu-latest
+
+steps:
+  - uses: actions/checkout@master
+  - name: Use Node.js 10.x
+  - uses: actions/setup-node@v1
+    with:
+      node-version: 16.x
+  - name: install yarn
+    run: npm install -g yarn
+  - name: yarn install, build, and test
+    run: |
+      yarn install  --frozen-lockfile
+  # yarn build
+  - name: Danger
+    run: yarn danger ci
+    env: GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
