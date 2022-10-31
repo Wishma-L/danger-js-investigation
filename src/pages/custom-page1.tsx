@@ -6,8 +6,8 @@ type CustomPage1Props = {}
 const CustomPage1 = ({}: CustomPage1Props) => {
     return (
       <>
-        <h1>React TS FC Component</h1>
-        <div>List</div>
+        <h1>Custom Page 1</h1>
+        <div>Page List</div>
       </>
     )
   };
