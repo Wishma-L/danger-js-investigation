@@ -3,7 +3,7 @@ on: [pull_request]
 
 jobs: 
 
-  name: "Danger JS"
+  name: Danger JS
   runs-on: ubuntu-latest
   steps: 
     - 
@@ -19,5 +19,5 @@ jobs:
       run: yarn --prefer-offline
     - 
       name: Danger
-  uses: danger/danger-js@9.1.6
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: danger/danger-js@9.1.6
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
