@@ -2,7 +2,7 @@ name: "Danger JS"
 on: [pull_request]
 
 jobs: 
-
+  Danger:
   name: Danger JS
   runs-on: ubuntu-latest
   steps: 
