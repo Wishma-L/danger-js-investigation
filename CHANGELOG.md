@@ -7,12 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Add code-coverage option.
+
+## [1.0.1] - 2022-11-01
+
 ### Removed
 
 - Removed dangerJS.
 
 ### Fixed
 
+- Update custom-page3
 - Remove invalid syntax from cd.yml
 - Fixed initial two pages.
 
