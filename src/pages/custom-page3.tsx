@@ -8,6 +8,7 @@ const CustomPage1 = ({}: CustomPage1Props) => {
       <>
         <h1>CustomPage 3 </h1>
         <div>page list</div>
+        <div>page list</div>
       </>
     )
   };
